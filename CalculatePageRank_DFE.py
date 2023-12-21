@@ -62,7 +62,7 @@ class Node:
         return
 
     def getAllNodes(self, nodeList : list['Node']):
-        newNodes = list(['Node'])
+        newNodes = list()
         for inNode in self.inNodes:
             if inNode not in nodeList:
                 nodeList.append(inNode)
