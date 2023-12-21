@@ -1,4 +1,4 @@
-from DFE_CalculatePageRank import Node
+from CalculatePageRank_DFE import Node
 import unittest
 import math
 
