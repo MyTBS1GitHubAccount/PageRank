@@ -8,7 +8,7 @@ class NodeTest(unittest.TestCase):
         pass
 
     def errorMsg(self, errorType, node:Node, expectedValue, tolerance):
-        match (errorType):
+        match errorType:
             case "wrongValueRecursive":
                 return f"RecursiveCalculationError: The node {node} has the Value {node.pageRank}, but {expectedValue} with a tolerance of {tolerance*100}% was expected"
             case "wrongValueIterative":
