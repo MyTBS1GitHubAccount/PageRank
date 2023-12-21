@@ -65,6 +65,7 @@ class NodeTest(unittest.TestCase):
 
 
     def calculationTesting(self, nodes:list['Node'], relTol):
+        self.assertGreater(len(nodes),0)
         nodes[0].calculatePageRank()        
         for node in nodes:
             self.assertTrue(math.isclose(node.pageRank, node.expectedValue, rel_tol=relTol), self.errorMsg("wrongValueIterative", node, node.expectedValue, relTol))
