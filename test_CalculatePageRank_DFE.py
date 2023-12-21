@@ -8,12 +8,12 @@ class NodeTest(unittest.TestCase):
         pass
 
     def errorMsg(self, errorType, node:Node, expectedValue, tolerance):
-        match errorType:
-            case "wrongValueRecursive":
+        
+            if errorType == "wrongValueRecursive":
                 return f"RecursiveCalculationError: The node {node} has the Value {node.pageRank}, but {expectedValue} with a tolerance of {tolerance*100}% was expected"
-            case "wrongValueIterative":
+            elif errorType == "wrongValueIterative":
                 return f"IterativeCalculationError: The node {node} has the Value {node.pageRank}, but {expectedValue} with a tolerance of {tolerance*100}% was expected"
-            case _:
+            else:
                 return f"unknown errorType: {errorType}"
 
     def test_graph1(self):
